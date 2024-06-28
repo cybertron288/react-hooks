@@ -5,10 +5,8 @@ const ExampleOscillatingValue: React.FC = () => {
   const [value, setValue] = useState<number>(0);
   const maxValue = 100;
 
-  // Use the custom hook
   const oscillatingValue = useOscillatingValue(value, maxValue);
 
-  // Simulate changing the value
   const incrementValue = () => {
     setValue((prevValue) => (prevValue + 1) % (maxValue + 1));
   };
